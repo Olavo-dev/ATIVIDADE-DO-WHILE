@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-let totalCobaias = 0;
-let totalCoelhos = 0;
-let totalRatos = 0;
-let contador = 0;
+        let totalCobaias = 0;
+        let totalCoelhos = 0;
+        let totalRatos = 0;
+        let contador = 0;
 
-do {
-    let valor = parseInt(prompt("Digite o número de cobaias utilizadas:"));
-    let codigo = parseInt(prompt("Digite o código (1 para coelhos, 2 para ratos):"));
+        do {
+            let valor = parseInt(prompt("Digite o número de cobaias utilizadas:"));
+            let codigo = parseInt(prompt("Digite o código (1 para coelhos, 2 para ratos):"));
 
-    if (codigo === 1) {
-        totalCoelhos += valor;
-    } else if (codigo === 2) {
-        totalRatos += valor;
-    }
+            if (codigo === 1 || codigo === 2) {
+                if (codigo === 1) {
+                    totalCoelhos += valor;
+                } else if (codigo === 2) {
+                    totalRatos += valor;
+                }
+            }else {
+                alert("Código inválido. Digite 1 para coelhos ou 2 para ratos.");
+                contador--;
+            }
 
-    totalCobaias += valor;
-    contador++;
-} while (contador < 15);
 
-let percentualCoelhos = (totalCoelhos / totalCobaias) * 100;
-let percentualRatos = (totalRatos / totalCobaias) * 100;
+            totalCobaias += valor;
+            contador++;
+        } while (contador < 15);
 
-alert("Total de cobaias: " + totalCobaias + "%");
-alert("Total de coelhos: " + totalCoelhos + "%");
-alert("Total de ratos: " + totalRatos + "%");
-alert("Percentual de coelhos: " + percentualCoelhos.toFixed(2) + "%");
-alert("Percentual de ratos: " + percentualRatos.toFixed(2) + "%");
+        let percentualCoelhos = (totalCoelhos / totalCobaias) * 100;
+        let percentualRatos = (totalRatos / totalCobaias) * 100;
+
+        alert("Total de cobaias: " + totalCobaias + "%");
+        alert("Total de coelhos: " + totalCoelhos + "%");
+        alert("Total de ratos: " + totalRatos + "%");
+        alert("Percentual de coelhos: " + percentualCoelhos.toFixed(2) + "%");
+        alert("Percentual de ratos: " + percentualRatos.toFixed(2) + "%");
     </script>
 </body>
+
 </html>
