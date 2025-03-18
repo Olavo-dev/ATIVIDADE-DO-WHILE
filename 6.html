@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const minima = 1;
+    const maxima = 12;
+    const numeroSecreto = Math.floor(Math.random() * (maxima - minima + 1)) + minima;
+    let tentativas = 0;
+    let palpite;
+
+    do {
+        palpite = prompt(`Adivinhe um número entre ${minima} e ${maxima}:`);
+        tentativas++;
+    } while (palpite != numeroSecreto);
+
+    alert(`Parabéns! Você acretou o número em ${tentativas} tentativas.`);
+    </script>
+</body>
+</html>
