@@ -10,7 +10,7 @@
 let totalCobaias = 0;
 let totalCoelhos = 0;
 let totalRatos = 0;
-let count = 0;
+let contador = 0;
 
 do {
     let valor = parseInt(prompt("Digite o número de cobaias utilizadas:"));
@@ -23,8 +23,8 @@ do {
     }
 
     totalCobaias += valor;
-    count++;
-} while (count < 15);
+    contador++;
+} while (contador < 15);
 
 let percentualCoelhos = (totalCoelhos / totalCobaias) * 100;
 let percentualRatos = (totalRatos / totalCobaias) * 100;
